@@ -79,7 +79,7 @@ export default function App() {
 
   return (
     <main>
-      <h1>Users table</h1>
+      <h1>User Management Table</h1>
       {content}
     </main>
   );
