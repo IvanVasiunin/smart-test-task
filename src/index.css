@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Merriweather:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background: linear-gradient(135deg, #0845a0 0%, #011835 100%);
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  overflow-x: auto;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+#loading-fallback {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px auto;
+  color: #ffffff;
+}
+
+@media (max-width: 1199px) {
+  main {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 959px) {
+  main {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+}
