@@ -39,23 +39,14 @@ export const usersSlice = createSlice({
 
       state.users = state.allUsers.filter((user) => {
         for (const fieldKey in state.filters) {
-          const filterValue = state.filters[fieldKey as keyof typeof state.filters];
+          const filterValue =
+            state.filters[fieldKey as keyof typeof state.filters];
           if (filterValue) {
-            if (fieldKey === "name") {
-              // Filtering by name and surname
-              const nameToArr: string[] = user.name.split(" ");
-              const nameMatches = nameToArr.some((word) =>
-                word.toLowerCase().startsWith(filterValue.toLowerCase())
-              );
-              if (!nameMatches) return false;
-            } else {
-              // Filtering by other fields
-              const userFieldValue = user[fieldKey as keyof User] as string;
-              const matches = userFieldValue
-                .toLowerCase()
-                .startsWith(filterValue.toLowerCase());
-              if (!matches) return false;
-            }
+            const userFieldValue = user[fieldKey as keyof User] as string;
+            const matches = userFieldValue
+              .toLowerCase()
+              .startsWith(filterValue.toLowerCase());
+            if (!matches) return false;
           }
         }
         return true;
